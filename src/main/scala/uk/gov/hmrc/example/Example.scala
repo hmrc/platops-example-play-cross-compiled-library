@@ -15,3 +15,5 @@
  */
 
 class Example
+
+// hotfix amended
