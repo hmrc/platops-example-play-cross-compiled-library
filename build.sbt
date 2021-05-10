@@ -1,13 +1,9 @@
-import PlayCrossCompilation._
-
-val libName = "platops-example-play-cross-compiled-library"
-
-lazy val simpleReactiveMongo = Project(libName, file("."))
-  .enablePlugins(SbtAutoBuildPlugin, SbtGitVersioning)
+lazy val root = Project("platops-example-play-cross-compiled-library", file("."))
   .settings(
     majorVersion        := 0,
     scalaVersion        := "2.12.12",
-    libraryDependencies ++= LibraryDependencies.compile ++ LibraryDependencies.test,
     crossScalaVersions  := Seq("2.11.12", "2.12.12"),
-    playCrossCompilationSettings
+    isPublicArtefact    := true,
+    libraryDependencies ++= LibraryDependencies.compile ++ LibraryDependencies.test,
+    PlayCrossCompilation.playCrossCompilationSettings
   )
