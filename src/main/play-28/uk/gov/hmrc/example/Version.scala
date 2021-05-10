@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-import org.scalatest.wordspec.AnyWordSpec
+package uk.gov.hmrc.example
 
-class ExampleSpec extends AnyWordSpec {
+import play.api.libs.json.{JsArray, Json}
 
-  "Example WIP" in {
-
-  }
-
+object Version {
+  val name: String = (JsArray(Seq(Json.parse("""{"version":"play 2.8"}"""))) \ 0 \ "version" ).as[String]
 }
