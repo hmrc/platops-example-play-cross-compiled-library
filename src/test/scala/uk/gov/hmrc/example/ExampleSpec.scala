@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-import org.scalatest.WordSpec
+import org.scalatest.wordspec.AnyWordSpec
 
-class ExampleSpec extends WordSpec {
+class ExampleSpec extends AnyWordSpec {
 
   "Example WIP" in {
-  
+
   }
 
 }
