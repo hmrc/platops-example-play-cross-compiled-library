@@ -3,8 +3,8 @@ import sbt._
 object LibraryDependencies {
 
   private val play26Version = "2.6.20"
-  private val play27Version = "2.7.4"
-  private val play28Version = "2.8.1"
+  private val play27Version = "2.7.5"
+  private val play28Version = "2.8.13"
 
   val compile: Seq[ModuleID] = PlayCrossCompilation.dependencies(
     shared = Seq(),
